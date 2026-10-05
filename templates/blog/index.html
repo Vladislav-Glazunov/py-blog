@@ -12,7 +12,9 @@
       {% endfor %}
     </ul>
   {% endif %}
-  {% block pagination %}
+{% endblock %}
+
+{% block pagination %}
   <ul class="pagination">
     {% if post_list.has_previous %}
       <li class="page-item"><a class="page-link" href="?page={{ post_list.previous_page_number }}">Prev</a></li>
@@ -22,5 +24,4 @@
       <li class="page-item"><a class="page-link" href="?page={{ post_list.next_page_number }}">Next</a></li>
     {% endif %}
   </ul>
-{% endblock %}
 {% endblock %}
